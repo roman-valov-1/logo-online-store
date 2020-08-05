@@ -1,3 +1,5 @@
+@import "normalize";
+
 // <ШРИФТЫ> ======================================================================
 
 // &display=swap&subset=cyrillic-ext
@@ -28,8 +30,12 @@ $maxWidth: 1400px;
 $maxWidthContainer: 1180px;
 // <Переменные> ======================================================================
 
+* {
+    box-sizing: border-box;
+}
+
 ._container {
-    max-width: $maxWidthContainer + px;
+    max-width: $maxWidthContainer;
     margin: 0 auto;
     padding: 0px 20px;
 }
