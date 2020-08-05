@@ -1,3 +1,9 @@
+// <ШРИФТЫ> ======================================================================
+
+// &display=swap&subset=cyrillic-ext
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,regular,500,700&display=swap&subset=cyrillic-ext");
+
 @mixin font($font_name, $file_name, $weight, $style) {
     @font-face {
         font-family: $font_name;
@@ -10,22 +16,20 @@
 
 @import "fonts";
 
-body {
-    font-size: 25px;
-    color: red;
-    background-color: black;
-    display: flex;
-    background: url(../img/forest.jpg) 0 0 no-repeat;
-}
-span{
-    font-size: 20px;
-    @media (max-width: 767px) {
-        font-size: 15px;
-    }
-}
-div{
-    font-size: 30px;
-    @media (max-width: 767px) {
-        font-size: 20px;
-    }
+// <Шрифт по умолчанию> ======================================================================
+$fontFamily: "Roboto";
+// <Шрифт по умолчанию> ======================================================================
+
+// <ШРИФТЫ> ======================================================================
+
+// <Переменные> ======================================================================
+$minWidth: 320px;
+$maxWidth: 1400px;
+$maxWidthContainer: 1180px;
+// <Переменные> ======================================================================
+
+._container {
+    max-width: $maxWidthContainer + px;
+    margin: 0 auto;
+    padding: 0px 20px;
 }
