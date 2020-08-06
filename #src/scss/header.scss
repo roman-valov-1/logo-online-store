@@ -1,0 +1,210 @@
+.header {
+    background: url("../img/bg_header.jpg") top no-repeat;
+    &__top {
+    }
+    &__bottom {
+    }
+}
+.top-header {
+    &__content {
+        display: flex;
+        align-items: center;
+        height: 90px;
+    }
+    &__column {
+        flex: 0 1 50%;
+        &_logo{
+            align-self: flex-start;
+            padding: 25px 0px 0px 0px;
+            flex: 0 0 190px;
+            text-align: center;
+        }
+    }
+    &__menu {
+    }
+    &__logo {
+    }
+    &__contacts {
+    }
+}
+.menu {
+    &__icon {
+    }
+    &__body {
+    }
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        grid-template-columns: 120px 135px 180px;
+        li {
+            margin: 2px 0px;
+        }
+    }
+    &__link {
+        font-family: "Play";
+        min-height: 27px;
+        text-decoration: underline;
+        color: #fff;
+        transition: 0.2s;
+        font-size: 14px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px 22px;
+        @media (min-width: 992px) {
+            &:hover{
+                border-radius: 20px;
+                background-color: #068292;
+            }
+        }
+    }
+}
+.icon-menu {
+}
+.contacts-header {
+    display: flex;
+    justify-content: center;
+    &__column {
+        padding: 0px 30px;
+        border-right: 1px solid #fff;
+        &:last-child{
+            border: 0;
+        }
+    }
+    &__item {
+        &_icon {
+            background: url("../img/icons/header/phone.png") left no-repeat;
+            padding: 0px 0px 0px 37px;
+        }
+    }
+    &__label {
+        font-size: 12px;
+        font-weight: 300;
+        color: #fff;
+        margin: 0px 0px 5px 0px;
+    }
+    &__phone {
+        text-decoration: none;
+        color: #fff;
+        font-size: 18px;
+        font-family: $fontFamily;
+        font-weight: 900;
+    }
+}
+.bottom-header {
+    &__container {
+        height: 63px;
+        display: flex;
+        align-items: center;
+    }
+    &__column {
+        flex: 0 1 50%;
+    }
+    &__actions {
+    }
+    &__info {
+    }
+}
+.actions-header {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 20%;
+    li {
+        font-family: $fontFamily;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    &__login {
+        padding: 0px 0px 0px 36px;
+        text-decoration: none;
+        background: url("../img/icons/header/login.png") left no-repeat;
+        display: inline-block;
+        line-height: 24px;
+        color: #999999;
+        span {
+            border-bottom: 1px dotted;
+        }
+    }
+    &__reg {
+        padding: 0px 0px 0px 36px;
+        text-decoration: none;
+        background: url("../img/icons/header/user.png") left no-repeat;
+        display: inline-block;
+        line-height: 24px;
+        color: #1ab9ce;
+        span {
+            border-bottom: 1px dotted;
+        }
+    }
+    &__email {
+        padding: 0px 0px 0px 36px;
+        text-decoration: none;
+        background: url("../img/icons/header/mail.png") left no-repeat;
+        display: inline-block;
+        line-height: 24px;
+        color: #1ab9ce;
+        span {
+            border-bottom: 1px dotted;
+        }
+    }
+}
+.info-header {
+    display: flex;
+    padding-left: 20%;
+    justify-content: space-between;
+    align-items: center;
+    font-family: $fontFamily;
+    &__column {
+    }
+    &__callback {
+        background: url("../img/icons/header/callback.png") left no-repeat;
+        display: inline-block;
+        color: #1ab9ce;
+        padding: 0px 0px 0px 32px;
+        line-height: 20px;
+        text-decoration: none;
+        span{
+            border-bottom: 1px dotted;
+        }
+    }
+    &__schedule {
+        background: url("../img/icons/header/schedule.png") left no-repeat;
+        padding: 0px 0px 0px 37px;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 18px;
+        color: #999999;
+        span{
+            font-weight: 900;
+        }
+        p{
+            margin: 0;
+            padding: 0;
+        }
+    }
+    &__cart {
+        width: 43px;
+        height: 43px;
+        display: inline-block;
+        background: url("../img/icons/header/cart.png") 0 0 no-repeat;
+        position: relative;
+        span{
+            padding: 0px 11px;
+            border-radius: 20px;
+            line-height: 25px;
+            position: absolute;
+            background-color: #f68038;
+            right: 0;
+            font-size: 18px;
+            font-weight: 700;
+            color: #fff;
+            transform: translate(70%, 0px);
+        }
+    }
+}
