@@ -481,6 +481,9 @@ template {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .contacts-header__column {
@@ -510,6 +513,7 @@ template {
   font-size: 18px;
   font-family: "Roboto";
   font-weight: 900;
+  white-space: nowrap;
 }
 
 .bottom-header__container {
@@ -550,43 +554,32 @@ template {
   font-weight: 400;
 }
 
-.actions-header__login {
+.actions-header__item {
   padding: 0px 0px 0px 36px;
   text-decoration: none;
-  background: url("../img/icons/header/login.png") left no-repeat;
   display: inline-block;
   line-height: 24px;
   color: #999999;
 }
 
-.actions-header__login span {
+.actions-header__item span {
   border-bottom: 1px dotted;
 }
 
-.actions-header__reg {
-  padding: 0px 0px 0px 36px;
-  text-decoration: none;
+.actions-header__item_login {
+  background: url("../img/icons/header/login.png") left no-repeat;
+}
+
+.actions-header__item_reg {
   background: url("../img/icons/header/user.png") left no-repeat;
-  display: inline-block;
-  line-height: 24px;
-  color: #1ab9ce;
 }
 
-.actions-header__reg span {
-  border-bottom: 1px dotted;
-}
-
-.actions-header__email {
-  padding: 0px 0px 0px 36px;
-  text-decoration: none;
+.actions-header__item_email {
   background: url("../img/icons/header/mail.png") left no-repeat;
-  display: inline-block;
-  line-height: 24px;
-  color: #1ab9ce;
 }
 
-.actions-header__email span {
-  border-bottom: 1px dotted;
+.actions-header__item_email span {
+  border-bottom: 1px solid;
 }
 
 .info-header {
@@ -648,19 +641,52 @@ template {
   line-height: 25px;
   position: absolute;
   background-color: #f68038;
-  right: 0;
+  right: -25px;
+  top: -5px;
   font-size: 18px;
   font-weight: 700;
   color: #fff;
-  -webkit-transform: translate(70%, 0px);
-      -ms-transform: translate(70%, 0px);
-          transform: translate(70%, 0px);
 }
 
-@media (min-width: 992px) {
+@media (min-width: 991.98px) {
   .menu__link:hover {
     border-radius: 20px;
     background-color: #068292;
+  }
+
+  .actions-header__item:hover {
+    color: #1ab9ce;
+  }
+}
+
+@media (max-width: 1192px) {
+  .menu__list {
+    grid-template-columns: 100px 115px 160px;
+  }
+
+  .menu__link {
+    padding: 5px 10px;
+  }
+
+  .contacts-header__column {
+    padding: 0px 15px;
+  }
+
+  .contacts-header__item_icon {
+    padding: 0px 0px 0px 25px;
+    background-size: 15px;
+  }
+
+  .contacts-header__phone {
+    font-size: 16px;
+  }
+
+  .actions-header__item:hover {
+    padding: 0px 0px 0px 30px;
+  }
+
+  .info-header__cart span {
+    right: -10px;
   }
 }
 
@@ -668,11 +694,11 @@ template {
 
 .webp .contacts-header__item_icon{ background: url(../img/icons/header/phone.webp) left no-repeat; }
 
-.webp .actions-header__login{ background: url(../img/icons/header/login.webp) left no-repeat; }
+.webp .actions-header__item_login{ background: url(../img/icons/header/login.webp) left no-repeat; }
 
-.webp .actions-header__reg{ background: url(../img/icons/header/user.webp) left no-repeat; }
+.webp .actions-header__item_reg{ background: url(../img/icons/header/user.webp) left no-repeat; }
 
-.webp .actions-header__email{ background: url(../img/icons/header/mail.webp) left no-repeat; }
+.webp .actions-header__item_email{ background: url(../img/icons/header/mail.webp) left no-repeat; }
 
 .webp .info-header__callback{ background: url(../img/icons/header/callback.webp) left no-repeat; }
 
