@@ -12,3 +12,9 @@ testWebP(function (support) {
         document.querySelector('body').classList.add('no-webp');
     }
 });
+
+$(document).ready(function() {
+    $('.icon-menu').click(function(event) {
+        $('.icon-menu').toggleClass('icon-menu_active');
+    })
+})
