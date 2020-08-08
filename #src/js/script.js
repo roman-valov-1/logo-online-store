@@ -1,3 +1,5 @@
+@@include('dynamic_adaptive.js');
+
 function testWebP(callback) {
     var webP = new Image();
     webP.onload = webP.onerror = function () {
@@ -16,5 +18,8 @@ testWebP(function (support) {
 $(document).ready(function() {
     $('.icon-menu').click(function(event) {
         $('.icon-menu').toggleClass('icon-menu_active');
+    })
+    $('.icon-menu').click(function(event) {
+        $('.menu__body').toggleClass('menu__body_active');
     })
 })
