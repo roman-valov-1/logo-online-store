@@ -23,3 +23,9 @@ $(document).ready(function() {
         $('.menu__body').toggleClass('menu__body_active');
     })
 })
+
+$(document).ready(function() {
+    $('.menu-page__burger').click(function(event) {
+        $('.menu-page__burger').toggleClass('menu-page__burger_active');
+    })
+})

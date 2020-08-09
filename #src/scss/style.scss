@@ -1,9 +1,5 @@
-@import "normalize";
-
 // <ШРИФТЫ> ======================================================================
-
 // &display=swap&subset=cyrillic-ext
-
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,regular,500,700,900&display=swap&subset=cyrillic-ext");
 
 @mixin font($font_name, $file_name, $weight, $style) {
@@ -15,13 +11,10 @@
         font-style: #{$style};
     }
 }
-
 @import "fonts";
-
 // <Шрифт по умолчанию> ======================================================================
 $fontFamily: "Roboto";
 // <Шрифт по умолчанию> ======================================================================
-
 // <ШРИФТЫ> ======================================================================
 
 // <Переменные> ======================================================================
@@ -34,10 +27,26 @@ $md3: 767.98px;
 $md4: 479.98px;
 // <Переменные> ======================================================================
 
+// <Общие параметры> ======================================================================
+@import "normalize";
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-
+ul,
+li {
+    list-style-type: none;
+}
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    &._loaded {
+    }
+}
 ._container {
     max-width: $maxWidthContainer;
     margin: 0 auto;
@@ -46,5 +55,239 @@ $md4: 479.98px;
         padding: 0px 10px;
     }
 }
+// <Общие параметры> ======================================================================
 
 @import "header";
+
+// <-- ОСНОВНОЙ БЛОК --> =====================================================================================
+.page {
+    padding: 160px 0px 0px 0px;
+    flex: 1 1 auto;
+    &__container {
+        display: flex;
+    }
+    &__side {
+        flex: 0 0 260px;
+    }
+    &__menu {
+    }
+    &__content {
+        flex: 1 1 auto;
+        padding: 0px 0px 0px 30px;
+    }
+}
+.menu-page {
+    position: relative;
+    background: url("../img/bg_menu.jpg") top no-repeat;
+    &__header {
+        padding: 20px;
+        display: flex;
+        align-items: center;
+    }
+    &__title {
+        color: #fff;
+        font-family: "UniSans";
+        line-height: 1.15em;
+        font-size: 30px;
+        text-transform: uppercase;
+        letter-spacing: 0.75px;
+    }
+    &__burger {
+        flex: 0 0 36px;
+        width: 36px;
+        height: 36px;
+        background-color: #068292;
+        position: relative;
+        cursor: pointer;
+        z-index: 5;
+        span {
+            position: absolute;
+            background-color: #fff;
+            left: 5px;
+            width: 26px;
+            height: 2px;
+            top: calc(50% - 1px);
+            transition: all 0.3s ease 0s;
+        }
+        &::before,
+        &::after {
+            content: "";
+            background-color: #fff;
+            position: absolute;
+            width: 26px;
+            height: 2px;
+            left: 5px;
+            transition: all 0.3s ease 0s;
+        }
+        &::before {
+            top: 8px;
+        }
+        &::after {
+            bottom: 8px;
+        }
+        &_active {
+            span {
+                transform: scale(0);
+            }
+            &::before {
+                transform: rotate(45deg);
+                top: 17px;
+            }
+            &::after {
+                transform: rotate(-45deg);
+                bottom: 17px;
+            }
+        }
+    }
+    &__body {
+    }
+    &__list {
+        li {
+            border-bottom: 1px solid #1aa7b9;
+        }
+    }
+    &__link {
+        text-decoration: none;
+        letter-spacing: 0.3px;
+        font-weight: 300;
+        font-size: 12px;
+        color: #fff;
+        display: block;
+        padding: 12px 20px;
+        font-family: $fontFamily;
+        position: relative;
+        &_parent {
+            &::after {
+                content: "";
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                width: 14px;
+                height: 14px;
+                transform: translate(0px, -50%);
+                background: url("../img/menu_arrow.png") 0 0 no-repeat;
+            }
+        }
+        &:hover {
+            background-color: #098494;
+        }
+    }
+    &__submenu {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        left: 100%;
+    }
+}
+.submenu-page {
+    width: 280px;
+    border: 2px solid #098494;
+    background-color: #fff;
+    &__item {
+    }
+    &__menu {
+        border-bottom: 1px solid #dedede;
+        padding: 20px 0px;
+        li {
+
+        }
+    }
+    &__link {
+        text-decoration: none;
+        display: block;
+        color: #1aa7b9;
+        font-size: 12px;
+        font-weight: 300;
+        font-family: $fontFamily;
+        letter-spacing: 0.3px;
+        padding: 10px 40px;
+        @media (min-width: $md2) {
+            &:hover {
+                background-color: #71c7d3;
+                color: #fff;
+            }
+        }
+    }
+    &__product {
+        padding: 0px 15px;
+    }
+}
+.item-product {
+    padding: 15px;
+    position: relative;
+    &__labels {
+        position: absolute;
+        left: 15px;
+        top: 15px;
+    }
+    &__label {
+        font-family: $fontFamily;
+        color: #fff;
+        margin: 0px 0px 5px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 15px;
+        font-weight: 900;
+        height: 24px;
+        text-transform: uppercase;
+        background-color: #fd8424;
+        border-radius: 15px;
+    }
+    &__image {
+        height: 195px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0px;
+        img {
+            max-width: 100%;
+            max-height: 175px;
+        }
+    }
+    &__body{
+        padding: 0px 10px;
+    }
+    &__title {
+        text-decoration: none;
+        font-family: $fontFamily;
+        color: #36949f;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 24px;
+        display: inline-block;
+        margin: 0px 0px 5px 0px;
+        @media (min-width: $md2) {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    &__footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__old-price {
+        flex: 1 1 100%;
+        color: #999999;
+        font-family: $fontFamily;
+        font-size: 18px;
+        font-weight: 300;
+        text-decoration: line-through;
+        text-align: right;
+    }
+    &__add {
+        width: 40px;
+        height: 40px;
+        background: url("../img/icons/cart_gray.png") 0 0 no-repeat;
+    }
+    &__price {
+        color: #333333;
+        font-family: $fontFamily;
+        font-size: 24px;
+        font-weight: 900;
+    }
+}
+// <-- ОСНОВНОЙ БЛОК --> =====================================================================================

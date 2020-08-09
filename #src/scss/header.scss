@@ -1,11 +1,16 @@
 .header {
-    background: url("../img/bg_header.jpg") top no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    background: #fff url("../img/bg_header.jpg") top no-repeat;
     &__top {
     }
     &__bottom {
     }
     @media (max-width: $md3) {
-        background: url("../img/bg_header.jpg") 0 -20px no-repeat;
+        background: #fff url("../img/bg_header.jpg") 0 -20px no-repeat;
     }
 }
 .top-header {
@@ -95,9 +100,9 @@
         }    
     }
     &__list {
-        margin: 0;
-        padding: 0;
-        list-style: none;
+        // margin: 0;
+        // padding: 0;
+        // list-style: none;
         display: grid;
         grid-template-columns: 120px 135px 180px;
         li {
@@ -278,9 +283,9 @@
     }
 }
 .actions-header {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+    // margin: 0;
+    // padding: 0;
+    // list-style: none;
     display: flex;
     align-items: center;
     justify-content: space-between;
