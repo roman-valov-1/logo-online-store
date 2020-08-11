@@ -15,8 +15,8 @@ testWebP(function (support) {
     }
 });
 
-
-// Реализация меню бургера через jQuery =====================================
+// HEADER ==========================================================================================
+// Реализация меню бургера через jQuery через класс _active =====================================
 $(document).ready(function() {
     $('.icon-menu').click(function(event) {
         $('.icon-menu').toggleClass('icon-menu_active');
@@ -25,7 +25,9 @@ $(document).ready(function() {
         $('.menu__body').toggleClass('menu__body_active');
     })
 })
+// HEADER // ==========================================================================================
 
+// ASIDE ==========================================================================================
 $(document).ready(function() {
     $('.menu-page__burger').click(function(event) {
         $('.menu-page__burger').toggleClass('menu-page__burger_active');
@@ -41,7 +43,7 @@ $(document).ready(function() {
 // });
 
 
-// Реализация всплывающей карточки товара в каталоге (нативный JS)
+// Реализация всплывающей карточки товара в каталоге (нативный JS) через класс _active
 let menuParents = document.querySelectorAll('.menu-page__parent');
 
 for (let index = 0; index < menuParents.length; index++) {
@@ -53,4 +55,33 @@ for (let index = 0; index < menuParents.length; index++) {
         menuParent.classList.remove('_active');
     });
 }
+// ASIDE // ==========================================================================================
 
+// SEARCH ==========================================================================================
+$(document).ready(function() {
+    $('.search-page__title').click(function(event) {
+        $('.search-page__title').toggleClass('_active');
+        $('.categories-search').slideToggle(500);
+    })
+})
+
+let checkboxCategories = document.querySelectorAll('.categories-search__checkbox');
+let searchSelect = document.querySelector('.search-page__title');
+
+for (let index = 0; index < checkboxCategories.length; index++) {
+    const checkboxCategory = checkboxCategories[index];
+    checkboxCategory.addEventListener("change", function(e) {
+        checkboxCategory.classList.toggle('_active');
+
+        let checkboxActiveCategories = document.querySelectorAll('.categories-search__checkbox._active');
+
+        if (checkboxActiveCategories.length > 0) {
+            searchSelect.classList.add('_categories');
+            let searchQuantity = searchSelect.querySelector('.search-page__quantity');
+            searchQuantity.innerHTML = searchQuantity.getAttribute('data-text') + ' ' + checkboxActiveCategories.length;
+        }else{
+            searchSelect.classList.remove('_categories');
+        }
+    });
+}
+// SEARCH // ==========================================================================================
