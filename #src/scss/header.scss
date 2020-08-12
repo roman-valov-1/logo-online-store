@@ -273,6 +273,9 @@
         height: 63px;
         display: flex;
         align-items: center;
+        @media (max-width: 640px) {
+            height: 0px;
+        }
     }
     &__column {
         flex: 0 1 50%;

@@ -58,29 +58,48 @@ li {
 // <Общие параметры> ======================================================================
 
 @import "header";
+@import "home";
 
 // <-- ОСНОВНОЙ БЛОК --> =====================================================================================
 .page {
     padding: 160px 0px 0px 0px;
     flex: 1 1 auto;
+    @media (max-width: $md3) {
+        padding: 133px 0px 0px 0px;
+    }
+    @media (max-width: 640px) {
+        padding: 85px 0px 0px 0px;;
+    }
     &__container {
-        display: flex;
+        @media (min-width: $md2){
+            display: flex;
+        }  
     }
     &__side {
         flex: 0 0 260px;
+        @media (max-width: $md2){
+            margin-bottom: 30px;
+        }
     }
     &__menu {
+        margin: 0px 0px 40px 0px;
     }
     &__content {
-        flex: 1 1 auto;
-        padding: 0px 0px 0px 30px;
+        @media (min-width: $md2){
+            flex: 1 1 auto;
+            padding: 0px 0px 0px 30px;
+        }      
     }
     &__search {
+        margin: 0px 0px 22px 0px;
+    }
+    &__slider {
+        margin: 0px 0px 65px 0px;
     }
 }
 // =========================================================
 .menu-page {
-    background: url("../img/bg_menu.jpg") top no-repeat;
+    background: url("../img/bg_menu.jpg") top repeat;
     position: relative;
     &__header {
         padding: 20px;
@@ -88,6 +107,7 @@ li {
         align-items: center;
     }
     &__title {
+        flex: 1 1 auto;
         color: #fff;
         font-family: "UniSans";
         line-height: 1.15em;
@@ -161,11 +181,14 @@ li {
                 height: 14px;
                 transform: translate(0px, -50%);
                 background: url("../img/menu_arrow.png") 0 0 no-repeat;
+                @media (max-width: $md2) {
+                    display: none;
+                }
             }
         }
         &._active {
             .submenu-page__item {
-                z-index: 2;
+                z-index: 5;
                 transform: translate(0px, 0px);
             }
             .menu-page__link {
@@ -189,6 +212,10 @@ li {
         &:hover {
             background-color: #098494;
         }
+        @media (max-width: $md3) {
+            font-size: 14px;
+            padding: 10px;
+        }
     }
     &__submenu {
         width: 100%;
@@ -197,6 +224,9 @@ li {
         height: 100%;
         left: 100%;
         overflow: hidden;
+        @media (max-width: $md2) {
+            display: none;
+        }
     }
 }
 .submenu-page {
@@ -321,11 +351,15 @@ li {
 .search-page {
     display: flex;
     position: relative;
+    z-index: 4;
     &__select {
         display: flex;
         background-color: #f3f3f3;
         padding: 0px 14px;
         align-items: center;
+        @media (max-width: $md3) {
+            display: none;
+        }
     }
     &__title {
         cursor: pointer;
@@ -335,18 +369,24 @@ li {
         display: flex;
         align-items: center;
         transition: all 0.3s ease 0s;
+        @media (max-width: $md3){
+            font-size: 14px;
+        }
         span {
             border-bottom: 1px dashed;
             margin: 0px 13px;
             &:last-child {
                 display: none;
             }
+            @media (max-width: $md3){
+                margin: 0px 7px;
+            }
         }
         &::before {
             content: "";
             width: 17px;
             height: 17px;
-            background: url("../img/icons/search_page.png") 0 0 no-repeat;
+            background: url("../img/icons/search_page.png") 50% 50% no-repeat;
         }
         &::after {
             content: "";
@@ -387,6 +427,9 @@ li {
             height: 100%;
             padding: 0 20px;
             outline: none;
+            @media (max-width: $md3) {
+                border-left: 2px solid #f2f2f2;
+            }
         }
     }
     &__btn {
@@ -401,6 +444,9 @@ li {
     cursor: default;
     &__row {
         display: flex;
+        @media (max-width: 568px){
+            flex-direction: column;
+        }
     }
     &__column {
         flex: 0 1 33.333%;
@@ -408,6 +454,9 @@ li {
         border-right: 1px solid #f3f3f3;
         &:last-child {
             border: 0;
+        }
+        @media (max-width: $md3){
+            padding: 10px 20px;
         }
     }
     &__list {
@@ -423,6 +472,9 @@ li {
     &__link {
         text-decoration: none;
         color: #999999;
+        @media (max-width: $md3) {
+            font-size: 14px;
+        }
     }
 }
 .checkbox {
