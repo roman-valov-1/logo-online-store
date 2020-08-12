@@ -792,8 +792,16 @@ li {
   margin: 0px 0px 22px 0px;
 }
 
-.page__slider {
+.page__banner {
   margin: 0px 0px 65px 0px;
+}
+
+.page__news-side {
+  margin: 0px 0px 75px;
+}
+
+.page__news-side:last-child {
+  margin: 0px 0px 0px 0px;
 }
 
 .menu-page {
@@ -1272,6 +1280,163 @@ li {
   font-weight: 900;
   background-color: #f68038;
   color: #fff;
+}
+
+.side-title {
+  font-family: "UniSans";
+  font-size: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  color: #dadada;
+  text-decoration: none;
+}
+
+.side-title:hover {
+  color: #1ab9ce;
+}
+
+.news-side__title {
+  display: inline-block;
+  margin-bottom: 0.8em;
+}
+
+.news-side__label {
+  display: inline-block;
+  font-family: "Roboto";
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 18px;
+  color: #333333;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.news-side__label:hover {
+  color: #fd8322;
+}
+
+.news-side__item {
+  margin: 0px 0px 45px 0px;
+}
+
+.news-side__item:last-child {
+  margin: 0px 0px 0px 0px;
+}
+
+.news-side__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.news-side__data {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 30px;
+          flex: 0 0 30px;
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 18px;
+  color: #d8d8d8;
+}
+
+.news-side__data span {
+  font-weight: 900;
+  font-size: 24px;
+  display: block;
+}
+
+.news-side__text {
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 18px;
+  color: #666666;
+  padding: 0px 0px 0px 15px;
+}
+
+.reviews-side__title {
+  display: inline-block;
+  margin-bottom: 0.6em;
+}
+
+.reviews-side__item {
+  display: block;
+  text-decoration: none;
+  margin: 0px 0px 45px 0px;
+}
+
+.reviews-side__item:last-child {
+  margin: 0px 0px 0px 0px;
+}
+
+.reviews-side__item:hover .reviews-side__user,
+.reviews-side__item:hover .reviews-side__data {
+  color: #1ab9ce;
+}
+
+.reviews-side__item:hover .reviews-side__body {
+  background-color: #1ab9ce;
+  color: #fff;
+}
+
+.reviews-side__item:hover .reviews-side__body::before {
+  color: #64deee;
+}
+
+.reviews-side__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0px 0px 10px 0px;
+}
+
+.reviews-side__user {
+  font-family: "Roboto";
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 18px;
+  color: #333333;
+}
+
+.reviews-side__user:hover {
+  color: #1ab9ce;
+}
+
+.reviews-side__data {
+  font-family: "Roboto";
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 18px;
+  color: #999999;
+}
+
+.reviews-side__body {
+  padding: 14px 8px 14px 30px;
+  position: relative;
+  font-family: "Roboto";
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 18px;
+  color: #666666;
+}
+
+.reviews-side__body::before {
+  color: #dadada;
+  font-size: 48px;
+  font-weight: 900;
+  content: '"';
+  position: absolute;
+  left: 8px;
+  top: 12px;
+  line-height: 1;
 }
 
 @media (min-width: 767.98px) {

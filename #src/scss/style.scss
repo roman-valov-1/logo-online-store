@@ -93,8 +93,16 @@ li {
     &__search {
         margin: 0px 0px 22px 0px;
     }
-    &__slider {
+    &__banner {
         margin: 0px 0px 65px 0px;
+    }
+    &__news-side {
+        margin: 0px 0px 75px;
+        &:last-child{
+            margin: 0px 0px 0px 0px;
+        }
+    }
+    &__reviews-side {
     }
 }
 // =========================================================
@@ -513,5 +521,143 @@ li {
         }
     }
 }
-
+// =========================================================
+.side-title {
+    font-family: "UniSans";
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.75px;
+    color: #dadada;
+    text-decoration: none;
+    &:hover{
+        color: #1ab9ce;
+    }
+}
+.news-side {
+    &__title {
+        display: inline-block;
+        margin-bottom: 0.8em;
+    }
+    &__label{
+        display: inline-block;
+        font-family: $fontFamily;
+        font-size: 12px;
+        font-weight: 900;
+        text-transform: uppercase;
+        line-height: 18px;
+        color: #333333;
+        text-decoration: none;
+        margin-bottom: 20px;
+        &:hover{
+        color: #fd8322;
+        }
+    }
+    &__items {
+        
+    }
+    &__item {
+        margin: 0px 0px 45px 0px;
+        &:last-child{
+            margin: 0px 0px 0px 0px;
+        }
+    }
+    &__body {
+        display: flex;
+    }
+    &__data {
+        flex: 0 0 30px;
+        text-align: center;
+        font-family: $fontFamily;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 18px;
+        color: #d8d8d8;
+        span {
+            font-weight: 900;
+            font-size: 24px;
+            display: block;
+        }
+    }
+    &__text {
+        font-family: $fontFamily;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 18px;
+        color: #666666;
+        padding: 0px 0px 0px 15px;
+    }
+}
+// =========================================================
+.reviews-side {
+    &__title {
+        display: inline-block;
+        margin-bottom: 0.6em;
+    }
+    &__items {
+    }
+    &__item {
+        display: block;
+        text-decoration: none;
+        margin: 0px 0px 45px 0px;
+        &:last-child{
+            margin: 0px 0px 0px 0px;
+        }
+        &:hover{
+            .reviews-side__user,
+            .reviews-side__data{
+                color: #1ab9ce;
+            }
+            .reviews-side__body{
+                background-color: #1ab9ce;
+                color: #fff;
+                &::before{
+                    color: #64deee;
+                }
+            }
+        }
+    }
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        margin: 0px 0px 10px 0px;
+    }
+    &__user {
+        font-family: $fontFamily;
+        font-size: 12px;
+        font-weight: 900;
+        text-transform: uppercase;
+        line-height: 18px;
+        color: #333333;
+        &:hover{
+            color: #1ab9ce;
+        }
+    }
+    &__data {
+        font-family: $fontFamily;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 18px;
+        color: #999999;
+    }
+    &__body {
+        padding: 14px 8px 14px 30px;
+        position: relative;
+        &::before{
+            color: #dadada;
+            font-size: 48px;
+            font-weight: 900;
+            content: '"';
+            position: absolute;
+            left: 8px;
+            top: 12px;
+            line-height: 1;
+        }
+        font-family: $fontFamily;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 18px;
+        color: #666666;
+    }
+}
 // <-- ОСНОВНОЙ БЛОК --> =====================================================================================
