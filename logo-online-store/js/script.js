@@ -213,3 +213,14 @@ for (let index = 0; index < checkboxCategories.length; index++) {
     });
 }
 // SEARCH // ==========================================================================================
+
+$(document).ready(function(){
+    $('.products-slider__item').slick({
+        infinite: false,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear',
+        slidesToShow: 1,
+        initialSLide: 0,
+    });
+  });

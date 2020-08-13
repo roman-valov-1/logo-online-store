@@ -1,3 +1,4 @@
+// =======================================================================================
 .banner {
    @media (min-width: $md2){
       max-width: 850px;
@@ -117,3 +118,90 @@
       color: #979797;
    }
 }
+// =============================================================================================================
+.products-slider {
+   &__slide{
+      max-width: 850px;
+      outline: none;
+   }
+   &__header {
+      display: flex;
+      margin: 0px 0px 60px 0px;
+   }
+   &__title {
+      flex: 1 1 auto;
+      font-family: "UniSans";
+      font-size: 30px;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.75px;
+      color: #dadada;
+      text-decoration: none;
+   }
+   &__control {
+   }
+   &__items {
+      outline: none;
+   }
+   &__item{
+      max-width: 850px;
+      position: relative;
+      margin: 0px 20px 0px 0px;
+   }
+}
+.slick-list{
+   overflow: hidden;
+   
+}
+.slick-track {
+   display: flex;
+}
+.slick-slide {
+   img{
+      outline: none;
+   }
+}
+.slick-slider{
+   z-index: 2 !important;
+   .slick-arrow{
+      position: absolute;
+      right: 0;
+      top: -45px;
+      padding: 0;
+      border: none;
+      font-size: 0;
+      cursor: pointer;
+      outline: none;
+      width: 35px;
+      height: 28px;
+      transition: all 0.2s ease 0s;
+   }
+   .slick-arrow.slick-prev{
+      margin: 0px 50px 0px 0px;
+      background: url('../img/icons/popular_arrow_blue_left.png') center center no-repeat;
+      &:hover{
+         background: url('../img/icons/popular_arrow_orange_left.png') center center no-repeat;
+      }
+   }
+   .slick-arrow.slick-next{
+      background: url('../img/icons/popular_arrow_blue_right.png') center center no-repeat;
+      &:hover{
+         background: url('../img/icons/popular_arrow_orange_right.png') center center no-repeat;
+      }
+   }
+   .slick-arrow.slick-disabled.slick-prev{
+      opacity: 0.5;
+      cursor: default;
+      &:hover{
+         background: url('../img/icons/popular_arrow_blue_left.png') center center no-repeat;
+      }
+   }
+   .slick-arrow.slick-disabled.slick-next{
+      opacity: 0.5;
+      cursor: default;
+      &:hover{
+         background: url('../img/icons/popular_arrow_blue_right.png') center center no-repeat;
+      }
+   }
+}
+// ======================================================================================================
