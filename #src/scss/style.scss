@@ -59,6 +59,7 @@ li {
 
 @import "header";
 @import "home";
+@import "footer";
 
 // <-- ОСНОВНОЙ БЛОК --> =====================================================================================
 .page {
@@ -68,7 +69,7 @@ li {
         padding: 133px 0px 0px 0px;
     }
     @media (max-width: 640px) {
-        padding: 85px 0px 0px 0px;;
+        padding: 85px 0px 0px 0px;
     }
     &__container {
         @media (min-width: $md2){
@@ -104,7 +105,13 @@ li {
     }
     &__reviews-side {
     }
-    &__products {
+    &__products {   
+    }
+    &__info {
+        padding: 30px 0px;
+        margin: 30px 0px;
+        border-top: 3px dashed #d8d8d8;
+        border-bottom: 3px dashed #d8d8d8;
     }
 }
 // =========================================================
@@ -628,7 +635,6 @@ li {
         padding: 0px 0px 0px 15px;
     }
 }
-// =========================================================
 .reviews-side {
     &__title {
         display: inline-block;
@@ -700,4 +706,88 @@ li {
         color: #666666;
     }
 }
+// =========================================================
+.info-page {
+    &__container {
+        @media (max-width: 567px){
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    }
+    &__text {
+        display: inline-flex;
+        align-items: center;
+        padding-bottom: 10px;
+        margin-bottom:10px;
+        border-bottom: 1px solid #d8d8d8;
+        span{
+            font-family: $fontFamily;
+            font-size: 14px;
+            font-weight: 900;
+            color: #000;
+        }
+        @media (max-width: 567px){
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            border: none;
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+            span{
+                margin-bottom: 10px;
+            }
+        }
+    }
+    &__list {
+        margin: 0px 15px;
+        li {
+            display: inline-block;
+            margin: 0px 15px 0px 0px;
+            &:last-child{
+                margin: 0px 0px 0px 0px;
+            }
+        }
+        @media (max-width: 567px){
+            margin: 0px;
+            li {
+                display: block;
+                margin: 0px 0px 5px 0px;
+            }
+        }
+    }
+    &__link {
+        text-decoration: none;
+        font-family: $fontFamily;
+        font-size: 14px;
+        font-weight: 300;
+        color: #1ab9ce;
+        &:hover{
+            color: #188492;
+        }
+    }
+    &__help {
+        display: flex;
+        align-items: center;
+        span{
+            font-family: $fontFamily;
+            font-size: 14px;
+            font-weight: 900;
+            color: #000;
+        }
+        @media (max-width: 567px){
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            span{
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+
+
+
+
 // <-- ОСНОВНОЙ БЛОК --> =====================================================================================
