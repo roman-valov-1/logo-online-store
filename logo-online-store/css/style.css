@@ -928,7 +928,7 @@ li {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0px 20px 20px 20px;
+  padding: 0px 20px 20px 0px;
 }
 
 .block-footer__column {
@@ -948,6 +948,7 @@ li {
 .block-footer__phone {
   font-family: "Roboto";
   display: inline-block;
+  white-space: nowrap;
   text-decoration: none;
   color: #333333;
   font-weight: 900;
@@ -2029,6 +2030,71 @@ li {
     font-size: 14px;
   }
 
+  .footer__body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+
+  .block-footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0px;
+  }
+
+  .block-footer .block-footer__column {
+    padding: 0px;
+  }
+
+  .block-footer .block-footer__phones {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .block-footer .block-footer__phones p {
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+
+  .block-footer .block-footer__phone {
+    padding: 0px;
+    min-height: 25px;
+    vertical-align: sub;
+  }
+
+  .delivery-footer {
+    padding: 20px 0px;
+  }
+
+  .delivery-footer .delivery-footer__items {
+    max-width: 100%;
+  }
+
+  .widgets-footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
   .page__side {
     margin-bottom: 30px;
   }
@@ -2087,6 +2153,55 @@ li {
     -ms-flex-pack: distribute;
         justify-content: space-around;
     padding: 0;
+  }
+
+  .footer__body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .block-footer {
+    padding: 0px;
+  }
+
+  .block-footer .block-footer__column {
+    padding: 0px;
+  }
+
+  .block-footer .block-footer__phones {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+
+  .block-footer .block-footer__phone {
+    margin-right: 25px;
+  }
+
+  .delivery-footer .delivery-footer__items {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+
+  .widgets-footer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 
   .page {
@@ -2289,6 +2404,39 @@ li {
 
   .text-banner {
     text-align: center;
+  }
+
+  .block-footer {
+    padding: 0px;
+  }
+
+  .block-footer .block-footer__column {
+    padding: 0px;
+  }
+
+  .block-footer .block-footer__phones {
+    display: block;
+  }
+
+  .block-footer .block-footer__phone {
+    margin-right: 25px;
+  }
+
+  .delivery-footer .delivery-footer__items {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .widgets-footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .widgets-footer .widgets-footer__column {
+    padding: 10px 0px;
   }
 
   .items-products__column {
